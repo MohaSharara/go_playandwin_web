@@ -1,18 +1,36 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react-swc';
+import path from 'path';
+import * as process from "node:process";
 
-console.log("Configuration file loaded");
+export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
+    // Load the correct .env file based on the mode (development, production, local)
+    const env = loadEnv(mode, process.cwd(), '')
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    host: "goplayandwin.local.com",
-    port: 3000,
-    open: true, // Optional: automatically open the app in the browser
-    hot: true,
-    compress: true,
-    liveReload: true,
-    historyApiFallback: true,
-  },
+
+    console.log(`Base URL: ${env.VITE_BASE_URL}`);
+    console.log(`Mode is : ${mode}`);
+
+    return {
+        plugins: [react()],
+        server: {
+            host: "goplayandwin.local.com",
+            port: 3000,
+            open: true,
+            hot: true,
+            compress: true,
+            liveReload: true,
+            historyApiFallback: true,
+        },
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, 'src'),
+            },
+        },
+        define: {
+            __APP_ENV__: JSON.stringify(env.APP_ENV),
+            "import.meta.env.VITE_BASE_URL": JSON.stringify(env.VITE_BASE_URL),
+            "import.meta.env.VITE_SECRET_KEY": JSON.stringify(env.VITE_SECRET_KEY),
+        },
+    };
 });
