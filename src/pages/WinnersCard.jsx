@@ -8,7 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const WinnersCard = () => {
     const {currentOperatorCode, languageProperties, setIsWinnerModalOpen, winnersList} = useContext(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
-    const default_image = "../assets/images/default-winner-profile.png";
+    const default_image = "./src/assets/images/default-winner-profile.png";
 
     // Example winners data (replace with API data if necessary)
     const winners = [

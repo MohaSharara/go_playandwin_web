@@ -1,8 +1,6 @@
 import React, {Fragment, useEffect} from "react";
 import LandingContextProvider from "./contexts/LandingContext";
 import AppWrapper from "./AppWrapper";
-import './assets/css/bootstrap.min.css';
-import './assets/css/base.css';
 import { detectIncognito } from "detectincognitojs";
 import Tools from "./config/Tools";
 import Auth from "./config/Auth";

@@ -28,8 +28,8 @@ const headers = {
 }
 
 let CurrentOperator = Tools.getInitialOperatorCode();
-let baseURL = "https://apis.goplayandwin.com/api/" + CurrentOperator
-// let baseURL = process.env.BaseUrl + CurrentOperator
+// let baseURL = "https://apis.goplayandwin.com/api/" + CurrentOperator
+let baseURL = import.meta.env.VITE_BASE_URL + CurrentOperator
 
 const Request = axios.create({
     baseURL: baseURL,
