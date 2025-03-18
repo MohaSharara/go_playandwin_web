@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --mode development",
+    "build:dev": "vite build --mode production",
+    "start:local": "vite --mode dev-local",
+    "start:dev": "vite --mode development",
+    "start:prod": "vite --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -32,6 +35,7 @@
     "react-router": "^7.3.0",
     "react-router-dom": "^7.3.0",
     "react-share": "^5.2.2",
+    "react-text-mask": "^5.5.0",
     "react-toastify": "^11.0.5",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.6.0",

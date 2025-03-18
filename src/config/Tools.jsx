@@ -274,8 +274,8 @@ class Tools {
             // console.log("operator", operator)
 
             if (operator === "goplayandwin" && !(process.env.NODE_ENV === 'production')){
-                // operator_code = "OOREDOO_ALGERIA"
-                operator_code = "OOREDOO_KUWAIT"
+                operator_code = "OOREDOO_ALGERIA"
+                // operator_code = "OOREDOO_KUWAIT"
                 // operator_code = "ASIACELL_IRAQ"
                 // operator_code = "OOREDOO_TUNISIA"
                 // operator_code = "OOREDOO_OMAN"

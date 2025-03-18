@@ -1,6 +1,6 @@
 import React, {Fragment, useContext, useEffect, useState} from "react";
 import Tools from "../config/Tools";
-import InputMask from 'react-input-mask';
+import MaskedInput from 'react-text-mask'
 import PhoneInput from "react-phone-input-2";
 import {LandingContext} from "../contexts/LandingContext";
 import {checkLoginToken, checkSubscriptionData, heSubscribeOrLogin, identify, verify} from "../services/Api";
@@ -468,7 +468,7 @@ const Subscribe = () => {
                                     <div className="row mt-0 align-items-center">
 
                                         <div className="col-12 mx-auto" dir="ltr">
-                                            <InputMask
+                                            <MaskedInput
                                                 className="form-control input-field"
                                                 style={{
                                                     background: "white",
@@ -480,21 +480,24 @@ const Subscribe = () => {
                                                     letterSpacing: 10,
                                                     color: '#495057',
                                                 }}
-                                                type={"tel"}
-                                                mask={Tools.getOtpMask(landingData.operator.otp_length)}
-                                                maskChar="_" alwaysShowMask={true} value={otpPin}
+                                                mask={Array(landingData.operator.otp_length || 4).fill(/\d/)}
+                                                value={otpPin || Array(landingData.operator.otp_length || 4).fill(/\d/).join('')} // Ensure the value shows underscores initially
+                                                placeholderChar={"_"}  // Already correctly set
+                                                placeholder={Array(landingData.operator.otp_length || 4).fill('_').join('')} // Display the correct number of underscores as placeholder
                                                 onChange={(e) => {
                                                     const value = e.target.value.replace(/ /g, '');  // Remove spaces from the OTP input value
                                                     setOtpPin(value);  // Set OTP pin state
-                                                    setVerifySubmit(false)
+                                                    setVerifySubmit(false);
                                                     setVerifyBtnDisabled(!isValidOTP(value));  // Disable button if OTP is invalid
                                                 }}
                                                 onFocus={() => {
                                                 }}
                                                 onBlur={() => {
                                                 }}
-                                                autoFocus={true}/>
+                                                autoFocus={true}
+                                            />
                                         </div>
+
 
                                     </div>
                                     <div className="row mt-3 align-items-center">
