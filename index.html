@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8"/>
+  <meta property="og:url" content="index.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Go Play & Win"/>
+  <meta property="og:description" content="Earn points and win prizes"/>
+  <meta property="og:image" itemprop="image" content="https://goplayandwin.com/assets/images/share_img.png?v=1"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:secure_url" itemprop="image" content="https://goplayandwin.com/assets/images/share_img.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta property="fb:app_id" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="referrer" content="unsafe-url">
+
+  <link rel="icon" type="image/x-icon" href="./src/assets/images/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/poppins.css">
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/fontawesome_v5.10.0.css"/>
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/fontawesome_v6.5.2.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href='./src/assets/css/app-styling.css'/>
+  <link rel="stylesheet" href='./src/assets/css/play.css'/>
+  <link rel="stylesheet" href='./src/index.css'/>
+
+  <title>Go Play & Win</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+
+    var qS = new URLSearchParams(window.location.search);
+
+    function getInitialOperatorCode() {
+      let operator_code = null;
+      let operator = null;
+      var currentLink = window.location.href.split("://");
+      var splitUrl = currentLink[1].split(".", 2);
+      operator = splitUrl[0]
+
+      if (operator === 'www' || operator === 'web') {
+        operator = splitUrl[1]
+      }
+
+      if (operator === "ooredooalgeria") {
+        operator_code = "OOREDOO_ALGERIA"
+      } else if (operator === "ooredootunisia") {
+        operator_code = "OOREDOO_TUNISIA"
+      } else if (operator === "ooredoooman") {
+        operator_code = "OOREDOO_OMAN"
+      } else if (operator === "omantel") {
+        operator_code = "OMANTEL_OMAN"
+      } else if (operator === "ooredookuwait") {
+        operator_code = "OOREDOO_KUWAIT"
+      } else if (operator === "asiacell") {
+        operator_code = "ASIACELL_IRAQ"
+      } else if (operator === "goplayandwin") {
+        // heProcess()
+      }
+
+
+      return operator_code
+    }
+
+    var initialOperator = getInitialOperatorCode();
+    var gtagSrc = null;
+    var tagID = null;
+
+    switch (initialOperator) {
+      case "OOREDOO_ALGERIA":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-5GZMRJ9RP1";
+        tagID = "G-5GZMRJ9RP1";
+        break;
+
+      case "OOREDOO_OMAN":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-05Q32RY2B8";
+        tagID = "G-05Q32RY2B8";
+        break;
+
+      case "OOREDOO_TUNISIA":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-YM229ZZL6B";
+        tagID = "G-YM229ZZL6B";
+        break;
+
+      case "OOREDOO_KUWAIT":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-Y7BE3NYQ97";
+        tagID = "G-Y7BE3NYQ97";
+        break;
+
+      case "ASIACELL_IRAQ":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-V0MGDTVF0N";
+        tagID = "G-V0MGDTVF0N";
+        break;
+
+      case "OMANTEL_OMAN":
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-B7W76LETS5";
+        tagID = "G-B7W76LETS5";
+        break;
+
+      default:
+        gtagSrc = "https://www.googletagmanager.com/gtag/js?id=G-5GZMRJ9RP1";
+        tagID = "G-5GZMRJ9RP1";
+    }
+
+    if (tagID) {
+
+      // Google Analytics integration
+      var gta_script = document.createElement('script');
+
+      gta_script.setAttribute('src', gtagSrc);
+      document.head.prepend(gta_script);
+
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+
+      localStorage.setItem("gtag-id", tagID)
+      gtag('js', new Date());
+      gtag('config', tagID);
+
+    }
+
+    function heProcess() {
+      const heMsisdn = qS.get("he-msisdn");
+      const isRedirected = qS.get("is-redirected");
+      const isRedirectedSaved = localStorage.getItem("is-redirected");
+
+      if (heMsisdn == null && !isRedirected && !isRedirectedSaved) {
+        console.log("msisdn == null && !isRedirected && !isRedirectedSaved")
+        let numHeaderUrl = `http://www.numheader.com`;
+        let redirectUrl = `${window.location.origin}${window.location.pathname}`;
+        let url = `${numHeaderUrl}?red_url=${redirectUrl}`;
+        window.location.assign(url);
+        return;
+      }
+
+      if (isRedirected) {
+        // Remove `?is-redirected=true` from the URL
+        const url = new URL(window.location.href);
+        url.searchParams.delete("is-redirected");
+        window.history.replaceState({}, document.title, url.pathname + url.search);
+
+        // Set `is-redirected` in localStorage
+        localStorage.setItem("is-redirected", 'true');
+      }
+    }
+
+  </script>
+  <!--    <link rel="stylesheet" href="../assets/css/mainStyle.css"/>-->
+
+</head>
+<body style="background-color: #040404; height: 100vh;">
+
+<div id="loader">
+  <div class="col-12 mx-auto mainBody centered">
+    <div class="text-center">
+      <img src="./src/assets/images/loader.png" alt="loader"  class="loader"/>
+    </div>
+  </div>
+</div>
+
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<!--<div id="root" class="d-none"></div>-->
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+
+<!--Load JS Libraries-->
+<script src="./src/assets/js/jquery-3.7.1.min.js"></script>
+<script src="./src/assets/js/bootstrap.min.js"></script>
+<script src="./src/assets/js/fingerprint2.min.js"></script>
+<script src="./src/assets/js/Winwheel.min.js"></script>
+<script src="./src/assets/js/TweenMax.min.js"></script>
+
+
+<script>
+
+  var qS = new URLSearchParams(window.location.search);
+  // let savedLang = localStorage.getItem('lang');
+  // if (!savedLang){
+  //     localStorage.setItem('lang', 'EN'); // Set lang to EN in local storage
+  // }
+  $(document).ready(function () {
+    // Function to close the language menu
+    function closeLanguageMenu() {
+      $(".language-container .dropdown-menu").removeClass("show"); // Adjust selector as per your HTML
+    }
+
+    // Function to close the burger menu
+    function closeBurgerMenu() {
+      $(".navbar-collapse").removeClass("show");
+      $(".navbar-toggler").attr("aria-expanded", "false");
+    }
+
+    // Event: Click on the language menu
+    $(".language-container").on("click", function (event) {
+      event.stopPropagation(); // Prevent event bubbling
+      let languageMenu = $(".language-container .dropdown-menu");
+      if (languageMenu.hasClass("show")) {
+        closeLanguageMenu(); // If already open, close it
+      } else {
+        closeBurgerMenu(); // Close burger menu
+        languageMenu.addClass("show"); // Open the language menu
+      }
+    });
+
+    // Event: Click on the burger menu
+    $(".navbar-toggler").on("click", function (event) {
+      event.stopPropagation(); // Prevent event bubbling
+      let burgerMenu = $(".navbar-collapse");
+      if (burgerMenu.hasClass("show")) {
+        closeBurgerMenu(); // If already open, close it
+      } else {
+        closeLanguageMenu(); // Close language menu
+        burgerMenu.addClass("show"); // Open the burger menu
+      }
+    });
+
+    // General click: Close both menus when clicking outside
+    $(document).click(function (event) {
+      closeLanguageMenu();
+      closeBurgerMenu();
+    });
+
+    // Prevent closing when clicking inside menus
+    $(".navbar-collapse, .language-container .dropdown-menu").click(function (event) {
+      event.stopPropagation();
+    });
+  });
+
+
+</script>
+
