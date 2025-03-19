@@ -13,6 +13,7 @@ import "../assets/css/play.css";
 import Result from "./Result";
 import Auth from "../config/Auth";
 import CryptoJS from 'crypto-js';
+import DraggableAnswers from "../shared/DraggableAnswers.jsx";
 
 const Play = () => {
     const {
@@ -260,10 +261,11 @@ const Play = () => {
     }, []);
 
     const renderAnswer = () => {
+        console.log("question.answering_type", question.answering_type)
         if (question.answering_type === constants.QUESTION_TYPE.SINGLE) {
             return answers.map((answer, i) => renderSingleAnswer(answer, i, onAnswerClick));
         } else {
-            // return <DraggableAnswers key={question.id} answers={answers} setOrderedQuest={setOrderedAnswersValue}/>;
+            return <DraggableAnswers key={question.id} answers={answers} setOrderedQuest={setOrderedAnswersValue}/>;
         }
     };
 

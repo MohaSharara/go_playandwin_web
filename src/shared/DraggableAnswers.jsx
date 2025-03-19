@@ -1,5 +1,20 @@
-import React, { Component, useContext } from "react";
-import { SortableContainer, SortableElement, arrayMove } from "react-sortable-hoc";
+import React, { useState, useEffect, useContext } from "react";
+import {
+	DndContext,
+	closestCenter,
+	KeyboardSensor,
+	PointerSensor,
+	useSensor,
+	useSensors,
+} from "@dnd-kit/core";
+import {
+	arrayMove,
+	SortableContext,
+	sortableKeyboardCoordinates,
+	useSortable,
+	verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import { LandingContext } from "../contexts/LandingContext";
 import "../assets/css/play.css";
 
@@ -22,67 +37,96 @@ const renderSvg = (languageProperties) => (
 	</svg>
 );
 
-const renderDiv = (value, index) => {
+const SortableItem = ({ value }) => {
 	const { languageProperties } = useContext(LandingContext);
+	const {
+		attributes,
+		listeners,
+		setNodeRef,
+		transform,
+		transition,
+	} = useSortable({ id: value.public_id });
+
+	const style = {
+		transform: CSS.Transform.toString(transform),
+		transition,
+	};
+
 	return (
-		<div key={index} className="col-md-12 text-center mb-2">
+		<div className="col-md-12 text-center mb-2">
 			<div
+				ref={setNodeRef}
+				style={style}
+				{...attributes}
+				{...listeners}
 				className="OrderanswerContainer cursor-grab position-relative d-flex align-items-center font-regular"
 				data-public-id={value.public_id}
 			>
 				{renderSvg(languageProperties)}
 				<span className="pl-4" data-public-id={value.public_id}>
-					{value.description}
-				</span>
+          {value.description}
+        </span>
 			</div>
 		</div>
 	);
 };
-
-const SortableItem = SortableElement(({ value, index }) => renderDiv(value, index));
-
-const SortableList = SortableContainer(({ items }) => {
-	return (
-		<div className="answerListingContainer">
-			{items.map((value, index) => (
-				<SortableItem key={`item-${value.public_id}`} index={index} value={value} />
-			))}
-		</div>
-	);
-});
 
 const getOrderedAnswers = (answers) => {
 	const answer_ids = answers.map((answer) => answer.public_id);
 	return answer_ids.join(",");
 };
 
-class SortableComponent extends Component {
-	state = {
-		items: this.props.answers,
+const SortableComponent = ({ answers, setOrderedQuest }) => {
+	const [items, setItems] = useState(answers);
+
+	const sensors = useSensors(
+		useSensor(PointerSensor),
+		useSensor(KeyboardSensor, {
+			coordinateGetter: sortableKeyboardCoordinates,
+		})
+	);
+
+	useEffect(() => {
+		setOrderedQuest(getOrderedAnswers(items));
+	}, [items, setOrderedQuest]);
+
+	useEffect(() => {
+		if (answers !== items) {
+			setItems(answers);
+		}
+	}, [answers]);
+
+	const handleDragEnd = (event) => {
+		const { active, over } = event;
+
+		if (active.id !== over.id) {
+			setItems((items) => {
+				const oldIndex = items.findIndex(item => item.public_id === active.id);
+				const newIndex = items.findIndex(item => item.public_id === over.id);
+
+				return arrayMove(items, oldIndex, newIndex);
+			});
+		}
 	};
 
-	componentDidMount() {
-		this.props.setOrderedQuest(getOrderedAnswers(this.state.items));
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-		if (prevProps.answers !== this.props.answers) {
-			this.setState({ items: this.props.answers });
-		}
-		if (prevState.items !== this.state.items) {
-			this.props.setOrderedQuest(getOrderedAnswers(this.state.items));
-		}
-	}
-
-	onSortEnd = ({ oldIndex, newIndex }) => {
-		this.setState(({ items }) => ({
-			items: arrayMove(items, oldIndex, newIndex),
-		}));
-	};
-
-	render() {
-		return <SortableList items={this.state.items} onSortEnd={this.onSortEnd} />;
-	}
-}
+	return (
+		<DndContext
+			sensors={sensors}
+			collisionDetection={closestCenter}
+			onDragEnd={handleDragEnd}
+		>
+			<SortableContext
+				items={items.map(item => item.public_id)}
+				strategy={verticalListSortingStrategy}
+			>
+				<div className="answerListingContainer">
+					{items.map((value) => (
+						<SortableItem key={value.public_id} value={value} />
+					))}
+				</div>
+			</SortableContext>
+		</DndContext>
+	);
+};
 
 export default SortableComponent;
