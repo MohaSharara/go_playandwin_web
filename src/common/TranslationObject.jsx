@@ -73,8 +73,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -99,9 +99,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -235,8 +235,8 @@ export default {
             SPIN_THE_WHEEL: 'Faites Tourner La Roue!',
             EARN_POINTS_OR_MORE: 'Remportez Des Points Ou Des Cadeaux !',
             GIVE_IT_A_SPIN: 'Tournez La Roue',
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'Pour accéder à la fonctionnalité "Tourner la roue", assurez-vous d\'avoir suffisamment de solde dans votre compte pour l\'abonnement.',
 
             // GET GPM Modal
@@ -262,9 +262,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "Téléchargez l'application et commencez à accumuler des points!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_fr.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_fr.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_fr.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_fr.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_fr.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_fr.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'Relevez les défis et',
@@ -386,8 +386,8 @@ export default {
             YOU_HAVE_NO_QUESTIONS: "لقد أجبت على جميع الأسئلة لليوم. عد غدًا للإجابة وجمع النقاط.",
 
             // TriviaGameCard
-            PLAY_FIVE_DAILY: "العب 5 أسئلة يومية",
-            AND_EARN_POINTS: "واكسب النقاط!",
+            PLAY_FIVE_DAILY: "أجب على 5 أسئلة يومية",
+            AND_EARN_POINTS: "و اكسب نقاط",
             JOIN_NOW: "انضم الآن",
             TAKE_THE_QUIZ: "ابدأ لعب الأسئلة",
             RETURN_TOMORROW: 'عاود المحاولة غدا',
@@ -403,8 +403,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -429,9 +429,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -522,7 +522,7 @@ export default {
             LOGOUT: 'Se déconnecter',
 
             // Subscribe
-            EARN_POINTS_AND_WIN: "Cumulez Des Points Et Gagnez",
+            EARN_POINTS_AND_WIN: "Cumulez des points et gagnez !",
             SUBSCRIPTION_BTN: 'Abonnez-Vous',
             VERIFICATION_BTN: 'Entrez le PIN',
             ENTER_NUMBER_BTN: "Entrez Votre Numéro De Téléphone",
@@ -549,25 +549,25 @@ export default {
             YOU_HAVE_COLLECTED_TOTAL: "Vous avez collecté {points} points au total pour le grand prix.",
 
             // TriviaGameCard
-            PLAY_FIVE_DAILY: 'Répondez à 5 questions quotidiennes',
-            AND_EARN_POINTS: 'et gagnez des points !',
+            PLAY_FIVE_DAILY: 'Répondez à 5 questions par jour',
+            AND_EARN_POINTS: 'et gagnez des points!',
             JOIN_NOW: 'Rejoignez Maintenant',
             TAKE_THE_QUIZ: 'Répondez au quiz',
             RETURN_TOMORROW: 'Rendez-Vous Demain',
             NOT_CHARGED_POPUP_MSG: 'Pour accéder aux questions du quiz quotidien, assurez-vous d\'avoir suffisamment de solde dans votre compte pour l\'abonnement.',
 
             // WeeklyGameCard
-            JOIN_WEEKLY_CHALLENGE: 'Rejoignez le défi hebdomadaire',
-            SCORE_ON_LEADERBOARD_1: 'Colléctez des points graimpez au score',
-            SCORE_ON_LEADERBOARD_2: 'sur le tableau des leaders et gagnez!',
+            JOIN_WEEKLY_CHALLENGE: 'Rejoignez le défi hebdomadaire.',
+            SCORE_ON_LEADERBOARD_1: 'Collectez des points,',
+            SCORE_ON_LEADERBOARD_2: 'augmentez le score et gagnez',
             PLAY: "Jouer",
 
             // SpinnerCard
             SPIN_THE_WHEEL: 'Tournez La Roue.',
-            EARN_POINTS_OR_MORE: 'Recevez Des Points Ou D\'autres Cadeaux à Gagner!',
+            EARN_POINTS_OR_MORE: 'Recevez des points ou d’autres cadeaux!',
             GIVE_IT_A_SPIN: ' Tournez la roue',
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'Pour accéder à la fonctionnalité "Tourner la roue", assurez-vous d\'avoir suffisamment de solde dans votre compte pour l\'abonnement.',
 
             // GET GPM Modal
@@ -592,9 +592,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "Téléchargez l'application et commencez à accumuler des points!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_fr.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_fr.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_fr.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_fr.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_fr.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_fr.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'Complétez les quêtes',
@@ -611,8 +611,8 @@ export default {
             ],
 
             // WinnersCard
-            NO_WINNERS_YET_1: "Les Gagnants",
-            NO_WINNERS_YET_2: "Seront Annoncés!",
+            NO_WINNERS_YET_1: "Les gagnants",
+            NO_WINNERS_YET_2: "seront annoncés!",
             WON: "A Gagné",
             VIEW_MORE: 'Liste des gagnants',
 
@@ -732,8 +732,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -758,9 +758,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -895,8 +895,8 @@ export default {
             SPIN_THE_WHEEL: 'Spin The Wheel',
             EARN_POINTS_OR_MORE: 'Earn Points Or More And WIN!',
             GIVE_IT_A_SPIN: 'Give it a spin',
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'To access the Spin the Wheel feature, make sure you have enough balance in your account for subscription. \n',
 
             // GET GPM Modal
@@ -921,9 +921,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "Download the App, It's Point-tastic",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_en.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_en.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_en.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_en.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_en.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_en.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'Complete quests',
@@ -1063,8 +1063,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -1089,9 +1089,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -1228,8 +1228,8 @@ export default {
             SPIN_THE_WHEEL: 'Spin The Wheel',
             EARN_POINTS_OR_MORE: 'Earn Points Or More And WIN!',
             GIVE_IT_A_SPIN: 'Give it a spin',
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'To access the Spin the Wheel feature, make sure you have enough balance in your account for subscription. \n',
 
             // GET GPM Modal
@@ -1254,9 +1254,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "Download the App, It's Point-tastic",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_en.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_en.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_en.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_en.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_en.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_en.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'Complete quests',
@@ -1273,8 +1273,8 @@ export default {
             ],
 
             // WinnersCard
-            NO_WINNERS_YET_1: "Les Gagnants",
-            NO_WINNERS_YET_2: "Seront Annoncés!",
+            NO_WINNERS_YET_1: "Winners",
+            NO_WINNERS_YET_2: "To Be Announced!",
             WON: "Won",
             VIEW_MORE: 'Winners List',
 
@@ -1396,8 +1396,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -1422,9 +1422,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -1561,8 +1561,8 @@ export default {
             SPIN_THE_WHEEL: 'Spin The Wheel',
             EARN_POINTS_OR_MORE: 'Earn Points Or More And WIN!',
             GIVE_IT_A_SPIN: 'Give it a spin',
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'To access the Spin the Wheel feature, make sure you have enough balance in your account for subscription. \n',
 
             // GET GPM Modal
@@ -1587,9 +1587,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "Download the App, It's Point-tastic",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_en.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_en.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_en.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_en.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_en.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_en.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'Complete quests',
@@ -1727,8 +1727,8 @@ export default {
             SPIN_THE_WHEEL: "دوّر العجلة يوميًا",
             EARN_POINTS_OR_MORE: "للفوز بفرص إضافية!",
             GIVE_IT_A_SPIN: "إبدأ",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ar.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ar.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ar.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ar.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'للوصول إلى ميزة "دور العجلة"، تأكد من أن لديك رصيداً كافياً في حسابك للاشتراك.',
 
             // GET GPM Modal
@@ -1753,9 +1753,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بميزات اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ar.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ar.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ar.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ar.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ar.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ar.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'أكمل المهام',
@@ -1890,8 +1890,8 @@ export default {
             SPIN_THE_WHEEL: "سپیندەکان بکە.",
             EARN_POINTS_OR_MORE: "خالەکان بەرز بکە و بەردەست بن!",
             GIVE_IT_A_SPIN: "پەیوەندی بەرز بکە",
-            SPINNER_CARD_BG_DESKTOP: "./src/assets/images/spinner_card_bg_desktop_ku.png",
-            SPINNER_CARD_BG_MOBILE: "./src/assets/images/spinner_card_bg_mobile_ku.png",
+            SPINNER_CARD_BG_DESKTOP: "/assets/images/spinner_card_bg_desktop_ku.png",
+            SPINNER_CARD_BG_MOBILE: "/assets/images/spinner_card_bg_mobile_ku.png",
             NOT_CHARGED_SPINNER_POPUP_MSG: 'بۆ گەیاندن بە تایبەتمەندی "چرخاندنی پەرتوکەکە"، دڵنیابە لەوەی کە تۆ پارەی کافی لە حیسابەکەت هەیە بۆ فەرمودانی.',
 
             // GET GPM Modal
@@ -1916,9 +1916,9 @@ export default {
 
             // DownloadTheApp
             DOWNLOAD_THE_APP: "حمّل التطبيق واستمتع بجمع نقاط اضافية!",
-            APPLE_STORE: "./src/assets/images/download_btns/apple_store_ku.png",
-            GOOGLE_PLAY: "./src/assets/images/download_btns/google_play_ku.png",
-            DOWNLOAD_DESKTOP: "./src/assets/images/download_btns/web_download_ku.png",
+            APPLE_STORE: "/assets/images/download_btns/apple_store_ku.png",
+            GOOGLE_PLAY: "/assets/images/download_btns/google_play_ku.png",
+            DOWNLOAD_DESKTOP: "/assets/images/download_btns/web_download_ku.png",
 
             // Complete The Quest
             COMPLETE_THE_QUEST: 'هەموو کوێزەکان پەیوەندی',
