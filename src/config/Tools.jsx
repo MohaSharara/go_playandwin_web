@@ -252,6 +252,10 @@ class Tools {
     //     return device_id
     // }
 
+    generateTransID() {
+        return Date.now().toString(36) + Math.random().toString(36).substring(2, 6);
+    }
+
 
     getInitialOperatorCode() {
         let operator_code = null;

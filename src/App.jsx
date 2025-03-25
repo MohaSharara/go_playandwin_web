@@ -1,59 +1,44 @@
-import React, {Fragment, useEffect} from "react";
+import React, { Fragment } from "react";
 import LandingContextProvider from "./contexts/LandingContext";
 import AppWrapper from "./AppWrapper";
-import { detectIncognito } from "detectincognitojs";
 import Tools from "./config/Tools";
 import Auth from "./config/Auth";
-
+import useHEProcess from './hooks/useHEProcess';
+import useIPRangeChecker from './hooks/useIPRangeChecker';
+import useIncognitoDetection from './hooks/useIncognitoDetection';
 
 function App() {
+    const heMsisdn = qS.get("msisdn") || qS.get("MSISDN") || qS.get("he-msisdn") || qS.get("customer_number");
+    const isRedirected = qS.get("is-redirected");
+    const authenticated = Auth.isAuthenticated();
+    const isRedirectedSaved = sessionStorage.getItem("is-redirected");
+    const isPrivate = useIncognitoDetection();
+    const currentOperatorCode = Tools.getInitialOperatorCode();
+    const general = currentOperatorCode === "GENERAL";
+    const isKuwait = currentOperatorCode === "OOREDOO_KUWAIT"
+    const isInRange = (isKuwait && !isPrivate) ? useIPRangeChecker() : true;
+    const shouldProcessHE = !isPrivate && isInRange && !heMsisdn && !isRedirected && !authenticated && !isRedirectedSaved && !general;
 
-    const currentOperatorCode = Tools.getInitialOperatorCode()
+    console.log("isPrivate", isPrivate)
+    console.log("isKuwait", isKuwait)
+    console.log("isInRange", isInRange)
+    console.log("shouldProcessHE", shouldProcessHE)
 
-    const heProcess = (params = {}) => {
-        const heMsisdn = qS.get("msisdn") || qS.get("he-msisdn") || qS.get("customer_number");
-        const isRedirected = qS.get("is-redirected");
-        const authenticated =  Auth.isAuthenticated()
-        const isRedirectedSaved = sessionStorage.getItem("is-redirected");
+    if (shouldProcessHE) {
+        useHEProcess(currentOperatorCode);
+    } else if (isRedirected) {
+        const url = new URL(window.location.href);
+        url.searchParams.delete("is-redirected");
+        window.history.replaceState({}, document.title, url.pathname + url.search);
 
-        if (heMsisdn == null && !isRedirected && !isRedirectedSaved && !authenticated) {
-            let numHeaderUrl = `http://www.numheader.com`;
-            let redirectUrl = `${window.location.origin}${window.location.pathname}`;
-            let url
-            if (currentOperatorCode === "OOREDOO_OMAN") {
-                url = `${numHeaderUrl}?is_ooredoo_oman=true&red_url=${redirectUrl}`;
-            } else {
-                url = `${numHeaderUrl}?red_url=${redirectUrl}`;
-            }
-            window.location.assign(url);
-            return;
-        }
-
-        if (isRedirected) {
-            // Remove `?is-redirected=true` from the URL
-            const url = new URL(window.location.href);
-            url.searchParams.delete("is-redirected");
-            window.history.replaceState({}, document.title, url.pathname + url.search);
-
-            // Set `is-redirected` in localStorage
-            sessionStorage.setItem("is-redirected", 'true');
-        }
+        // Mark as redirected in sessionStorage
+        sessionStorage.setItem("is-redirected", "true");
     }
 
-    useEffect(() => {
-        detectIncognito().then((result) => {
-            if (!result.isPrivate && ((currentOperatorCode === "OOREDOO_ALGERIA") || (currentOperatorCode === "OOREDOO_TUNISIA") || (currentOperatorCode === "OOREDOO_OMAN") || (currentOperatorCode === "OMANTEL_OMAN"))){
-                heProcess()
-            }
-        });
-    }, []);
-
-
     return (
-
         <Fragment>
             <LandingContextProvider>
-                <AppWrapper/>
+                <AppWrapper />
             </LandingContextProvider>
         </Fragment>
     );
