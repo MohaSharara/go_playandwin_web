@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { use } from "react";
 import Tools from "../config/Tools";
 import { LandingContext } from "../contexts/LandingContext";
 
 const CompleteQuests = () => {
-    const { currentOperatorCode, languageProperties } = useContext(LandingContext);
+    const { currentOperatorCode, languageProperties } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 
     return (

@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState, useContext, lazy, Suspense} from "react";
+import React, {Fragment, useEffect, useState, use, lazy, Suspense} from "react";
 import {BrowserRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
 import Auth from "./config/Auth";
@@ -18,7 +18,7 @@ import NotAvailable from "./pages/NotAvailable";
 
 const AppWrapper = () => {
 
-        const {landingData, currentOperatorCode, languageProperties} = useContext(LandingContext);
+        const {landingData, currentOperatorCode, languageProperties} = use(LandingContext);
         const [loading, setLoading] = useState(true);
         const general = currentOperatorCode === "GENERAL";
 

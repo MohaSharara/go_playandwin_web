@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {use} from "react";
 import {LandingContext} from "../contexts/LandingContext";
 // import { isMobile } from "react-device-detect";
 import constants from "../common/constants";
@@ -7,7 +7,7 @@ import Auth from "../config/Auth";
 import {useNavigate} from "react-router-dom";
 
 const TriviaGameCard = (props) => {
-    const {currentOperatorCode, languageProperties, isMobile, canPlay, landingData, eventCategory, failedCharging} = useContext(LandingContext);
+    const {currentOperatorCode, languageProperties, isMobile, canPlay, landingData, eventCategory, failedCharging} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const navigate = useNavigate();
 

@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from "react";
+import React, {Fragment, use} from "react";
 import Tools from "../config/Tools";
 import {LandingContext} from "../contexts/LandingContext";
 import constants from "../common/constants";
@@ -6,7 +6,7 @@ import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const WinnersCard = () => {
-    const {currentOperatorCode, languageProperties, setIsWinnerModalOpen, winnersList} = useContext(LandingContext);
+    const {currentOperatorCode, languageProperties, setIsWinnerModalOpen, winnersList} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const default_image = "./src/assets/images/default-winner-profile.png";
 

@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect, Fragment} from "react";
+import React, {useState, use, useEffect, Fragment} from "react";
 import Modal from "react-modal";
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
@@ -16,7 +16,7 @@ const InviteModal = () => {
         languageProperties,
         isInviteModalOpen,
         setInviteModalOpen,
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const [loading, setLoading] = useState(true);
     const [copied, setCopied] = useState(false);

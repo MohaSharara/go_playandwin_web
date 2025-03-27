@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import {useContext} from "react";
+import {use} from "react";
 import {LandingContext} from "../contexts/LandingContext";
 import constants from "../common/constants";
 import {Helmet} from "react-helmet";
@@ -7,7 +7,7 @@ import MultiShareButtons from "../shared/MultiShareButtons";
 
 export default function Result(props) {
     const {correctAnswers, totalQuestion, roundTotalPoints, totalCollected, translation_obj} = props;
-    const {landingData, gameURL} = useContext(LandingContext);
+    const {landingData, gameURL} = use(LandingContext);
     const share = "/assets/images/share_img.png";
 
     const fullImageUrl = `https://goplayandwin.com${share}`;

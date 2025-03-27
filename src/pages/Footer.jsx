@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, use } from "react";
 import { LandingContext } from "../contexts/LandingContext";
 import Tools from "../config/Tools";
 import constants from "../common/constants";
@@ -10,7 +10,7 @@ const Footer = (props) => {
         languageProperties,
         setIsUnSubModalOpen,
         subscriptionType
-    } = useContext(LandingContext);
+    } = use(LandingContext);
 
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 

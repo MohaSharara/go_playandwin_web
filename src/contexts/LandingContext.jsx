@@ -240,7 +240,7 @@ const LandingContextProvider = (props) => {
     //
 
 
-    return (<LandingContext.Provider
+    return (<LandingContext
         value={{
             landingData,
             setLandingData,
@@ -288,7 +288,7 @@ const LandingContextProvider = (props) => {
             subscriptionType
         }}>
         {props.children}
-    </LandingContext.Provider>);
+    </LandingContext>);
 }
 
 export default LandingContextProvider;

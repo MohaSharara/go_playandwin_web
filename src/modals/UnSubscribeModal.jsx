@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, use} from "react";
 import Modal from "react-modal";
 import {Link} from "react-router-dom";
 import {LandingContext} from "../contexts/LandingContext";
@@ -15,7 +15,7 @@ const UnSubscribeModal = () => {
         languageProperties,
         isUnSubModalOpen,
         setIsUnSubModalOpen
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const [loading, setLoading] = useState(false);
     const dir = languageProperties.dir;

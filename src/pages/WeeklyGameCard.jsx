@@ -1,11 +1,11 @@
-import React, {useContext} from "react";
+import React, {use} from "react";
 import Tools from "../config/Tools";
 import {LandingContext} from "../contexts/LandingContext";
 import Auth from "../config/Auth";
 import constants from "../common/constants";
 
 const WeeklyGameCard = (props) => {
-    const { currentOperatorCode, languageProperties, isMobile, gameURL, landingData, eventCategory} = useContext(LandingContext);
+    const { currentOperatorCode, languageProperties, isMobile, gameURL, landingData, eventCategory} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     function formatGameName(snakeCaseString) {
         if (!snakeCaseString) return '';

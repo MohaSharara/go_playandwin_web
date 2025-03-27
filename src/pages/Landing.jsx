@@ -1,11 +1,11 @@
-import React, {Fragment, lazy, useContext, useEffect, useState} from "react";
+import React, {Fragment, lazy, use, useEffect, useState} from "react";
 import Tools from "../config/Tools";
 import {LandingContext} from "../contexts/LandingContext";
 import constants from "../common/constants";
 import Profile from "../shared/Profile";
 
 const Landing = () => {
-    const {currentOperatorCode, languageProperties, totalPoints, operatorConfig} = useContext(LandingContext);
+    const {currentOperatorCode, languageProperties, totalPoints, operatorConfig} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const prize_img = Tools.getPrizeImage(operatorConfig);
 

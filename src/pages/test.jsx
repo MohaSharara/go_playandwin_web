@@ -1,10 +1,10 @@
-import React, {Fragment, useContext} from "react";
+import React, {Fragment, use} from "react";
 
 import {LandingContext} from "../contexts/LandingContext";
 
 
 const Test = () => {
-    const {landingData} = useContext(LandingContext);
+    const {landingData} = use(LandingContext);
 
 
     return (

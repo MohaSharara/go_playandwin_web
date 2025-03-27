@@ -1,11 +1,11 @@
-import React, { Fragment, useContext, useEffect } from "react";
+import React, { Fragment, use, useEffect } from "react";
 import { LandingContext } from "../contexts/LandingContext";
 import Tools from "../config/Tools";
 import constants from "../common/constants";
 import { isIOS } from "react-device-detect";
 
 const NotAvailable = () => {
-    const { operators, countryCode } = useContext(LandingContext);
+    const { operators, countryCode } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj("GENERAL");
 
     useEffect(() => {

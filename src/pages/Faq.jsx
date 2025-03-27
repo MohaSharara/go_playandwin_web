@@ -1,10 +1,10 @@
-import React, {Fragment, useContext, useState} from 'react';
+import React, {Fragment, use, useState} from 'react';
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
 
 const Faq = (props) => {
     const [openAccordion, setOpenAccordion] = useState(null);
-    const {currentOperatorCode, languageProperties, faqsContent} = useContext(LandingContext);
+    const {currentOperatorCode, languageProperties, faqsContent} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode)
 
     const toggleAccordion = (i) => {

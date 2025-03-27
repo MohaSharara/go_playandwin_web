@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect, useState} from "react";
+import React, {Fragment, use, useEffect, useState} from "react";
 import {LandingContext} from "../contexts/LandingContext";
 import {getNextStepData, submitAnswer} from "../services/Api";
 import Tools from "../config/Tools";
@@ -25,7 +25,7 @@ const Play = () => {
         setCanPlay,
         playedQuestions,
         totalQuestions,
-    } = useContext(LandingContext);
+    } = use(LandingContext);
 
     const canNotEnterPlayPage = playedQuestions >= totalQuestions;
 

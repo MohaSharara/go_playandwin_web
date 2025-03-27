@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { use } from "react";
 import Tools from "../config/Tools";
 import { LandingContext } from "../contexts/LandingContext";
 import constants from "../common/constants";
 import {isAndroid, isIOS, isDesktop} from "react-device-detect";
 
 const DownloadTheApp = () => {
-    const { currentOperatorCode, languageProperties, operatorConfig } = useContext(LandingContext);
+    const { currentOperatorCode, languageProperties, operatorConfig } = use(LandingContext);
 
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 

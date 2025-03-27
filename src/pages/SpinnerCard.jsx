@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Tools from "../config/Tools";
 import { LandingContext } from "../contexts/LandingContext";
 import Auth from "../config/Auth";
@@ -15,7 +15,7 @@ const SpinnerCard = () => {
 		failedCharging,
 		setIsNeedGPMModalOpen,
 		operatorConfig
-	} = useContext(LandingContext);
+	} = use(LandingContext);
 
 	const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 	const [disabledSpin, setDisabledSpin] = useState(false);

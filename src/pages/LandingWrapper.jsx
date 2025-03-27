@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect} from 'react';
+import React, {Fragment, use, useEffect} from 'react';
 import TriviaGameCard from "./TriviaGameCard";
 import Faq from "./Faq";
 import Footer from "./Footer";
@@ -28,7 +28,7 @@ const LandingWrapper = () => {
         setInviteModalOpen,
         isShareModalOpen,
         setIsShareModalOpen,
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const channel = Tools.getCurrentChannel()
 
     useEffect(() => {

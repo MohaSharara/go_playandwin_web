@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect, useState} from "react";
+import React, {Fragment, use, useEffect, useState} from "react";
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
 import {toast} from "react-toastify";
@@ -7,7 +7,7 @@ import constants from "../common/constants";
 import TermsOLD from "./TermsOLD";
 
 const Terms = () => {
-    const {languageProperties, currentOperatorCode} = useContext(LandingContext);
+    const {languageProperties, currentOperatorCode} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const [termsContent, setTermsContent] = useState();
     const [apiFinished, setApiFinished] = useState(false);

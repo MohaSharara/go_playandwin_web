@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useState, useEffect, useRef, use } from "react";
 import { getSpinner, startSpinner } from "../services/Api.jsx";
 import Tools from "../config/Tools.jsx";
 import { LandingContext } from "../contexts/LandingContext.jsx";
@@ -6,7 +6,7 @@ import { LandingContext } from "../contexts/LandingContext.jsx";
 
 
 const useSpinnerModule = () => {
-	const { setTotalPoints, setCanSpin, currentOperatorCode, languageProperties } = useContext(LandingContext);
+	const { setTotalPoints, setCanSpin, currentOperatorCode, languageProperties } = use(LandingContext);
 	const tick = "../assets/sounds/tick.mp3";
 	const winTrack = "../assets/sounds/win_track.wav";
 	const [wheelSpinning, setWheelSpinning] = useState(false);

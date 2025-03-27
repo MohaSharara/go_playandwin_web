@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect, useState} from "react";
+import React, {Fragment, use, useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import Tools from "../config/Tools";
 import TranslationObject from "../common/TranslationObject";
@@ -8,7 +8,7 @@ import {changeLanguage} from "../services/Api";
 import constants from "../common/constants";
 
 const LanguageSwitcher = (props) => {
-    const {landingData, currentOperatorCode, operatorConfig} = useContext(LandingContext);
+    const {landingData, currentOperatorCode, operatorConfig} = use(LandingContext);
     let savedLang = localStorage.getItem('lang');
     const [language, setLanguage] = useState(localStorage.getItem('lang'));
     const availableLanguages = landingData?.operator?.languages

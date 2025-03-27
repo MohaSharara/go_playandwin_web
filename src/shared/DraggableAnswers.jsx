@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, use } from "react";
 import {
 	DndContext,
 	closestCenter,
@@ -38,7 +38,7 @@ const renderSvg = (languageProperties) => (
 );
 
 const SortableItem = ({ value }) => {
-	const { languageProperties } = useContext(LandingContext);
+	const { languageProperties } = use(LandingContext);
 	const {
 		attributes,
 		listeners,

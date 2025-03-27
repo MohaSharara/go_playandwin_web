@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from "react";
+import React, {Fragment, use} from "react";
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
 import constants from "../common/constants";
@@ -14,7 +14,7 @@ const Profile = () => {
         totalQuestions,
         isMobile,
         canPlay
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode)
 
     const played_over_total = languageProperties.dir === "ltr" ? playedQuestions + "/" + totalQuestions : totalQuestions + "/" + playedQuestions

@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect, useState} from "react";
+import React, {Fragment, use, useEffect, useState} from "react";
 import Tools from "../config/Tools";
 import MaskedInput from 'react-text-mask'
 import PhoneInput from "react-phone-input-2";
@@ -23,7 +23,7 @@ const Subscribe = () => {
         getLanding,
         setLoading,
         omanOperators
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const [inputNumber, setInputNumber] = useState('');
     const [subscriptionFlow, setSubscriptionFlow] = useState('OTP_FLOW');
     const [packageType, setPackageType] = useState('DAILY');

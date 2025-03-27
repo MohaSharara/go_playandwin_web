@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect} from 'react';
+import React, {Fragment, use, useEffect} from 'react';
 import Subscribe from "./Subscribe";
 import TriviaGameCard from "./TriviaGameCard";
 import Faq from "./Faq";
@@ -19,7 +19,7 @@ const SubscribeWrapper = () => {
         isUnSubModalOpen,
         isWinnerModalOpen,
         setLoading
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const channel = Tools.getCurrentChannel()
 
     useEffect(() => {

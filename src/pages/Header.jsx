@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { Fragment, use, useEffect, useState } from "react";
 import Auth from "../config/Auth";
 import { LandingContext } from "../contexts/LandingContext";
 import Tools from "../config/Tools";
@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { useLocation } from "react-use";
 
 const Header = () => {
-	const { currentOperatorCode } = useContext(LandingContext);
+	const { currentOperatorCode } = use(LandingContext);
 	const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 	const [isLandingPage, setIsLandingPage] = useState(true);
 	const location = useLocation();

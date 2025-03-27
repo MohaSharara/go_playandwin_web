@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
+import React, {use} from 'react';
 import Tools from "../Tools";
 import {LandingContext} from "../../contexts/LandingContext";
 
 
 const DateTimeDisplay = ({value, type, isDanger}) => {
-    const {currentOperatorCode} = useContext(LandingContext);
+    const {currentOperatorCode} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode)
 
 

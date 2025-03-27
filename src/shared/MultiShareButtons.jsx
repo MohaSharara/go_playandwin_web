@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {use} from "react";
 import {submitShareData} from "../services/Api";
 import {FacebookShareButton, TelegramShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import {toast} from "react-toastify";
@@ -7,7 +7,7 @@ import Tools from "../config/Tools";
 import constants from "../common/constants";
 
 const MultiShareButtons = ({design, url}) => {
-    const {landingData, currentOperatorCode, getLanding} = useContext(LandingContext);
+    const {landingData, currentOperatorCode, getLanding} = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 
     const handleShareButtonClick = (platform) => {

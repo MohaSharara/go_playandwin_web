@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, {useState, use, useEffect} from "react";
 import Modal from "react-modal";
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
@@ -14,7 +14,7 @@ const NeedGPMModal = () => {
         isNeedGPMModalOpen,
         setIsNeedGPMModalOpen,
         operatorConfig
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
     const [loading, setLoading] = useState(true);
     const dir = languageProperties.dir;

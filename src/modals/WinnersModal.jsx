@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect, useState} from "react";
+import React, {Fragment, use, useEffect, useState} from "react";
 import Modal from "react-modal";
 import {LandingContext} from "../contexts/LandingContext";
 import Tools from "../config/Tools";
@@ -13,7 +13,7 @@ const WinnersModal = () => {
         isWinnerModalOpen,
         setIsWinnerModalOpen,
         languageProperties
-    } = useContext(LandingContext);
+    } = use(LandingContext);
     const [winnersContent, setWinnersContent] = useState([]);
     const [loading, setLoading] = useState(true);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);

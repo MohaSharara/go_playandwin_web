@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState, useRef } from "react";
+import React, { Fragment, use, useEffect, useState, useRef } from "react";
 import Modal from "react-modal";
 import { LandingContext } from "../contexts/LandingContext";
 import Confetti from "react-confetti";
@@ -16,7 +16,7 @@ const SpinTheWheelModal = () => {
 		currentOperatorCode,
 		canSpin,
 		getLanding,
-	} = useContext(LandingContext);
+	} = use(LandingContext);
 	const { init, startSpin, prepareSpinnerData, loading, showConfetti, spinnerRewardType, number } = useSpinnerModule();
 
 	let pointsResult = spinnerRewardType === "POINTS";
