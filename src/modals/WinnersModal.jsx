@@ -18,7 +18,7 @@ const WinnersModal = () => {
     const [loading, setLoading] = useState(true);
     const translation_obj = Tools.getTranslationObj(currentOperatorCode);
 
-    const default_image = "./src/assets/images/default-winner-profile.png";
+    const default_image = "/assets/images/default-winner-profile.png";
     const winners = [
         {id: 1, name: "John Doe", prize: "$5,000", image: constants.IMAGES.WINNER_DEMO_IMAGE, won_dt: "10/12/2024"},
         {id: 2, name: "Jane Doe", prize: "$3,000", image: constants.IMAGES.WINNER_DEMO_IMAGE, won_dt: "10/11/2024"},
