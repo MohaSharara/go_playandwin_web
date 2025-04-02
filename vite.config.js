@@ -1,8 +1,8 @@
-import { defineConfig, loadEnv } from 'vite';
+import {defineConfig, loadEnv} from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import * as process from 'node:process';
-import { viteStaticCopy } from 'vite-plugin-static-copy'; // You'll need to install this
+import {viteStaticCopy} from 'vite-plugin-static-copy';
 
 export default defineConfig(({ command, mode }) => {
     // Load the correct .env file based on the mode (development, production, local)
@@ -25,8 +25,14 @@ export default defineConfig(({ command, mode }) => {
                         dest: 'assets/css'
                     },
                     {
-                        src: 'src/assets/images/*',
-                        dest: 'assets/images'
+                        // Use ** pattern to include all subdirectories
+                        src: 'src/assets/images/**/*',
+                        dest: 'assets/images',
+                        // Preserve the directory structure
+                        rename: (fileName, fileExtension, fullPath) => {
+                            // Extract the relative path from src/assets/images/
+                            return fullPath.replace(/^.*?src\/assets\/images\//, '');
+                        }
                     }
                 ]
             })
@@ -53,9 +59,7 @@ export default defineConfig(({ command, mode }) => {
         build: {
             target: 'esnext', // To allow top-level await
             rollupOptions: {
-                // Either remove the external option entirely if you want to bundle these libraries
-                // or keep it if you genuinely want to exclude them from the bundle
-                // external: ['jquery', 'bootstrap', 'fingerprint2', 'Winwheel', 'TweenMax'],
+                // Removed external option to allow bundling
             },
         },
     };
