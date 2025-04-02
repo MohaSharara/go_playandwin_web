@@ -12,7 +12,7 @@ export default {
     BUCKET_GAMES_INDEX: "/index.html",
     INVALID_EMAIL: "Invalid Email Address",
     EMAIL_ADDRESS_EMPTY: "Email Address Cannot Be empty",
-    GRIP_DOTS: './src/assets/images/operators/OoredooAlgeria/fa-grip-dots-vertical.png',
+    GRIP_DOTS: '/assets/images/operators/OoredooAlgeria/fa-grip-dots-vertical.png',
     GPM: ['GPM-DCB-MEGAPROMO', 'GPM'],
     TENANT_To_COUNTRY_CODE: {
         orddza: 'DZ', // Algeria
@@ -37,42 +37,42 @@ export default {
     LANGUAGES: {EN: "English", AR: "العربية", FR: "Français", KU: "کوردی", DV: "ދިވެހި"},
 
     IMAGES: {
-        HOME_LOGO: "./src/assets/images/home.png",
-        LEFT_LOGO: "./src/assets/images/logo.png",
-        PRIZE_CHARACTER: "./src/assets/images/prize_character.png",
-        GO_PLAY_PHONE: "./src/assets/images/go_play_phone.png",
-        DOWN_ARROW: "./src/assets/images/up-arrow.png",
-        STAR: "./src/assets/images/star.png",
-        GRAND_PRIZE: "./src/assets/images/grand_prize.png",
-        WEEKLY_PRIZE: "./src/assets/images/weekly_prize.png",
-        LOADER: "./src/assets/images/loader.png",
+        HOME_LOGO: "/assets/images/home.png",
+        LEFT_LOGO: "/assets/images/logo.png",
+        PRIZE_CHARACTER: "/assets/images/prize_character.png",
+        GO_PLAY_PHONE: "/assets/images/go_play_phone.png",
+        DOWN_ARROW: "/assets/images/up-arrow.png",
+        STAR: "/assets/images/star.png",
+        GRAND_PRIZE: "/assets/images/grand_prize.png",
+        WEEKLY_PRIZE: "/assets/images/weekly_prize.png",
+        LOADER: "/assets/images/loader.png",
 
-        WEEKLY_CARD_BG_DESKTOP: "./src/assets/images/weekly_game_card_bg_desktop.png",
-        WEEKLY_CARD_BG_MOBILE: "./src/assets/images/weekly_game_card_bg_mobile.png",
-        TRIVIA_CARD_BG_DESKTOP: "./src/assets/images/trivia_game_card_bg_desktop.png",
-        TRIVIA_CARD_BG_MOBILE: "./src/assets/images/trivia_game_card_bg_mobile.png",
-        WINNERS_CARD_BG_DESKTOP: "./src/assets/images/winners_card_bg_desktop.png",
-        WINNERS_CARD_BG_MOBILE: "./src/assets/images/winners_card_bg_mobile.png",
-        NO_WINNERS_CARD_BG_DESKTOP: "./src/assets/images/no-winner-bg.png",
-        NO_WINNERS_CARD_BG_MOBILE: "./src/assets/images/no-winners_card_bg_mobile.png",
+        WEEKLY_CARD_BG_DESKTOP: "/assets/images/weekly_game_card_bg_desktop.png",
+        WEEKLY_CARD_BG_MOBILE: "/assets/images/weekly_game_card_bg_mobile.png",
+        TRIVIA_CARD_BG_DESKTOP: "/assets/images/trivia_game_card_bg_desktop.png",
+        TRIVIA_CARD_BG_MOBILE: "/assets/images/trivia_game_card_bg_mobile.png",
+        WINNERS_CARD_BG_DESKTOP: "/assets/images/winners_card_bg_desktop.png",
+        WINNERS_CARD_BG_MOBILE: "/assets/images/winners_card_bg_mobile.png",
+        NO_WINNERS_CARD_BG_DESKTOP: "/assets/images/no-winner-bg.png",
+        NO_WINNERS_CARD_BG_MOBILE: "/assets/images/no-winners_card_bg_mobile.png",
 
-        WINNER_DEMO_IMAGE: "./src/assets/images/winner_demo_image.png",
+        WINNER_DEMO_IMAGE: "/assets/images/winner_demo_image.png",
 
-        STAR_ICON: "./src/assets/images/star-icon.png",
-        QUESTION_ICON: "./src/assets/images/question-icon.png",
+        STAR_ICON: "/assets/images/star-icon.png",
+        QUESTION_ICON: "/assets/images/question-icon.png",
 
-        TWITTER_IMG: "./src/assets/images/footer/twitter.png",
-        FACEBOOK_IMG: "./src/assets/images/footer/facebook.png",
-        TIKTOK_IMG: "./src/assets/images/footer/tiktok.png",
-        INSTAGRAM_IMG: "./src/assets/images/footer/instagram.png",
-        SHARE_TWITTER: "./src/assets/images/icons/twitter.svg",
-        SHARE_FACEBOOK: "./src/assets/images/icons/facebook.svg",
-        SHARE_WHATSAPP: "./src/assets/images/icons/whatsapp.svg",
-        SHARE_TELEGRAM: "./src/assets/images/icons/telegram.svg",
-        // PROFILE_RESULT: './src/assets/images/credits_bg.png',
-        PROFILE_RESULT: './src/assets/images/result_bg.png',
-        ORDERING_DOTS: './src/assets/images/ordering_dots.svg',
-        LOADER_IMAGE: './src/assets/images/loading_icon.gif',
+        TWITTER_IMG: "/assets/images/footer/twitter.png",
+        FACEBOOK_IMG: "/assets/images/footer/facebook.png",
+        TIKTOK_IMG: "/assets/images/footer/tiktok.png",
+        INSTAGRAM_IMG: "/assets/images/footer/instagram.png",
+        SHARE_TWITTER: "/assets/images/icons/twitter.svg",
+        SHARE_FACEBOOK: "/assets/images/icons/facebook.svg",
+        SHARE_WHATSAPP: "/assets/images/icons/whatsapp.svg",
+        SHARE_TELEGRAM: "/assets/images/icons/telegram.svg",
+        // PROFILE_RESULT: '/assets/images/credits_bg.png',
+        PROFILE_RESULT: '/assets/images/result_bg.png',
+        ORDERING_DOTS: '/assets/images/ordering_dots.svg',
+        LOADER_IMAGE: '/assets/images/loading_icon.gif',
     },
 
     DOWNLOAD_APP_URLS: {
@@ -94,12 +94,12 @@ export default {
             INDEX_CONFIG: {
                 OG_TITLE: 'Win with Zain',
                 OG_DESCRIPTION: 'إشترك الآن وجاوب على الأسئلة لفرصة ربح 5,000 دينار شهرياً. أول 4 أيام مجانا ثم 0.1 د.ك/اليوم',
-                FAVICON: './src/assets/images/operators/zainKuwait/mpt-favicon.png',
+                FAVICON: '/assets/images/operators/zainKuwait/mpt-favicon.png',
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/algeria-prize-ar.png',
-                    FR: './src/assets/images/prizes/algeria-prize-fr.png',
+                    AR: '/assets/images/prizes/algeria-prize-ar.png',
+                    FR: '/assets/images/prizes/algeria-prize-fr.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "ooredoo_algeria",
@@ -116,8 +116,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/tunis-prize-ar.png',
-                    FR: './src/assets/images/prizes/tunis-prize-fr.png',
+                    AR: '/assets/images/prizes/tunis-prize-ar.png',
+                    FR: '/assets/images/prizes/tunis-prize-fr.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "ooredoo_tunisia",
@@ -134,8 +134,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/oman-prize-ar.png',
-                    EN: './src/assets/images/prizes/oman-prize-en.png',
+                    AR: '/assets/images/prizes/oman-prize-ar.png',
+                    EN: '/assets/images/prizes/oman-prize-en.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "ooredoo_tunisia",
@@ -152,8 +152,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/oman-prize-ar.png',
-                    EN: './src/assets/images/prizes/oman-prize-en.png',
+                    AR: '/assets/images/prizes/oman-prize-ar.png',
+                    EN: '/assets/images/prizes/oman-prize-en.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "omantel_oman",
@@ -170,8 +170,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/kuwait-prize-ar.png',
-                    EN: './src/assets/images/prizes/kuwait-prize-en.png',
+                    AR: '/assets/images/prizes/kuwait-prize-ar.png',
+                    EN: '/assets/images/prizes/kuwait-prize-en.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "ooredoo_kuwait",
@@ -188,8 +188,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/iraq-prize-ar.png',
-                    KU: './src/assets/images/prizes/iraq-prize-ku.png',
+                    AR: '/assets/images/prizes/iraq-prize-ar.png',
+                    KU: '/assets/images/prizes/iraq-prize-ku.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "asiacell_iraq",
@@ -206,8 +206,8 @@ export default {
             },
             IMG: {
                 PRIZE: {
-                    AR: './src/assets/images/prizes/oman-prize-ar.png',
-                    EN: './src/assets/images/prizes/oman-prize-en.png',
+                    AR: '/assets/images/prizes/oman-prize-ar.png',
+                    EN: '/assets/images/prizes/oman-prize-en.png',
                 }
             },
             ANALYTICS_EVENT_CATEGORY: "asiacell_iraq",
