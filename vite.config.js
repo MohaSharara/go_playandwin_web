@@ -19,6 +19,10 @@ export default defineConfig(({ command, mode }) => {
                     {
                         src: 'src/assets/js/*.min.js',
                         dest: 'assets/js'
+                    },
+                    {
+                        src: 'src/assets/css/*.css',
+                        dest: 'assets/css'
                     }
                 ]
             })
