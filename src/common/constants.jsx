@@ -224,7 +224,7 @@ export default {
         {name: "ooredookuwait", operator: "OOREDOO_KUWAIT"},
         {name: "kuwait", operator: "OOREDOO_KUWAIT"},
         {name: "asiacell", operator: "ASIACELL_IRAQ"},
-        {name: "go-playandwin-nh5q3874f-mohashararas-projects", operator: "OOREDOO_ALGERIA"},
+        {name: "go-playandwin-web", operator: "OOREDOO_ALGERIA"},
     ],
 
     COUNTRY_OPERATORS: {
