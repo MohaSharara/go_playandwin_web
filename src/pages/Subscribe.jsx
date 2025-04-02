@@ -1,6 +1,7 @@
 import React, {Fragment, use, useEffect, useState} from "react";
 import Tools from "../config/Tools";
 import MaskedInput from 'react-text-mask'
+import { IMaskInput } from 'react-imask';
 import PhoneInput from "react-phone-input-2";
 import {LandingContext} from "../contexts/LandingContext";
 import {checkLoginToken, checkSubscriptionData, heSubscribeOrLogin, identify, verify} from "../services/Api";
@@ -461,80 +462,62 @@ const Subscribe = () => {
                             </Fragment>
                         }
 
-                        {currentView === 'VERIFICATION' &&
-                            <Fragment>
-                                <form
-                                    onSubmit={(e) => verifyNumber(e, currentOperatorCode, inputNumber, otpPin)}>
-                                    <div className="row mt-0 align-items-center">
 
+                        {currentView === 'VERIFICATION' && (
+                            <Fragment>
+                                <form onSubmit={(e) => verifyNumber(e, currentOperatorCode, inputNumber, otpPin)}>
+                                    <div className="row mt-0 align-items-center">
                                         <div className="col-12 mx-auto" dir="ltr">
-                                            <MaskedInput
+                                            <IMaskInput
                                                 className="form-control input-field"
                                                 style={{
                                                     background: "white",
                                                     textAlign: 'center',
                                                     height: "53px",
                                                     borderRadius: "10px",
-                                                    width: '-webkit-fill-available',
+                                                    width: '100%',
                                                     maxWidth: '100%',
                                                     letterSpacing: 10,
                                                     color: '#495057',
                                                 }}
-                                                mask={Array(landingData.operator.otp_length || 4).fill(/\d/)}
-                                                value={otpPin || Array(landingData.operator.otp_length || 4).fill(/\d/).join('')} // Ensure the value shows underscores initially
-                                                placeholderChar={"_"}  // Already correctly set
-                                                placeholder={Array(landingData.operator.otp_length || 4).fill('_').join('')} // Display the correct number of underscores as placeholder
-                                                onChange={(e) => {
-                                                    const value = e.target.value.replace(/ /g, '');  // Remove spaces from the OTP input value
-                                                    setOtpPin(value);  // Set OTP pin state
+                                                mask={new Array(landingData.operator.otp_length || 4).fill(0).join('')}
+                                                definitions={{ '0': /\d/ }}
+                                                value={otpPin}
+                                                placeholder={new Array(landingData.operator.otp_length || 4).fill('_').join('')}
+                                                unmask={true} // Ensures only numbers are stored in state
+                                                onAccept={(value) => {
+                                                    setOtpPin(value);
                                                     setVerifySubmit(false);
-                                                    setVerifyBtnDisabled(!isValidOTP(value));  // Disable button if OTP is invalid
-                                                }}
-                                                onFocus={() => {
-                                                }}
-                                                onBlur={() => {
+                                                    setVerifyBtnDisabled(!isValidOTP(value));
                                                 }}
                                                 autoFocus={true}
                                             />
                                         </div>
-
-
                                     </div>
                                     <div className="row mt-3 align-items-center">
-
                                         <div className="col-12 mx-auto">
                                             <button
                                                 className="btn btn-xl col-8 subscribe-btn text-white mx-auto position-relative"
                                                 disabled={verifyBtnDisabled}>
-                                                {verifyBtnDisabled &&
-                                                    <Fragment>
-                                                        {verifySubmit ?
-                                                            (
-                                                                <span
-                                                                    className="spinner-border spinner-border-sm space mr-1"
-                                                                    role="status"
-                                                                    aria-hidden="true">
-                                                            </span>
-                                                            ) : (
-                                                                <span className="space font-extra-bold">
-                                                                    {translation_obj.VERIFICATION_BTN}
-                                                                </span>
-                                                            )
-                                                        }
-                                                    </Fragment>
-                                                }
-                                                {!verifyBtnDisabled &&
+                                                {verifyBtnDisabled ? (
+                                                    verifySubmit ? (
+                                                        <span className="spinner-border spinner-border-sm space mr-1" role="status" aria-hidden="true"></span>
+                                                    ) : (
+                                                        <span className="space font-extra-bold">
+                                    {translation_obj.VERIFICATION_BTN}
+                                </span>
+                                                    )
+                                                ) : (
                                                     <span className="space font-extra-bold">
-                                                        {translation_obj.CONFIRM}
-                                                    </span>
-                                                }
+                                {translation_obj.CONFIRM}
+                            </span>
+                                                )}
                                             </button>
                                         </div>
-
                                     </div>
                                 </form>
                             </Fragment>
-                        }
+                        )}
                     </div>
                 </div>
                 {currentView === "SUBSCRIPTION" && (currentOperatorCode === "OOREDOO_ALGERIA") &&
