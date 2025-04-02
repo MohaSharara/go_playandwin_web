@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { use } from "react";
 import { LandingContext } from "../contexts/LandingContext";
 import constants from "../common/constants";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import MultiShareButtons from "../shared/MultiShareButtons";
 
 export default function Result(props) {
@@ -11,8 +10,6 @@ export default function Result(props) {
     const share = "/assets/images/share_img.png";
 
     const fullImageUrl = `https://goplayandwin.com${share}`;
-
-    // const shareMessage = translation_obj.SHARE_MESSAGE(totalCollected);
     const shareMessage = translation_obj.NEW_SHARE_MESSAGE;
 
     const renderImageWithPoints = () => {
@@ -28,29 +25,29 @@ export default function Result(props) {
                 <div className="position-relative">
                     <img src={constants.IMAGES.PROFILE_RESULT} className="col-8 p-0 position-relative" alt="Points Background"/>
                     <span className="msisdn-position position-absolute font-bold" dir="ltr">
-            {landingData.profile.msisdn}
-          </span>
+                        {landingData.profile.msisdn}
+                    </span>
                     <span className="answers-position position-absolute font-medium">
-            <span className="font-bold fs-6">
-              <Fragment>
-                <div className="text-white">
-                  <div className="correctAnswerFont pt-2">{translation_obj.CORRECT_ANSWERS}</div>
-                  <span className="fs-4">{correctAnswers}/{totalQuestion}</span>
-                </div>
-              </Fragment>
-            </span>
-          </span>
+                        <span className="font-bold fs-6">
+                            <Fragment>
+                                <div className="text-white">
+                                    <div className="correctAnswerFont pt-2">{translation_obj.CORRECT_ANSWERS}</div>
+                                    <span className="fs-4">{correctAnswers}/{totalQuestion}</span>
+                                </div>
+                            </Fragment>
+                        </span>
+                    </span>
                     <span className="points-position position-absolute font-medium">
-            <span className="font-bold fs-6">
-              <Fragment>
-                <div className="text-white points-earned-activator">
-                  <div className="correctAnswerFont pt-2">{translation_obj.POINTS_EARNED_THIS_ROUND}</div>
-                  <span className="fs-4">{roundTotalPoints}</span>
-                  <div className="card d-none" id="points-earned-popup">{translation_obj.POINTS_EARNED_THIS_ROUND_POPUP}</div>
-                </div>
-              </Fragment>
-            </span>
-          </span>
+                        <span className="font-bold fs-6">
+                            <Fragment>
+                                <div className="text-white points-earned-activator">
+                                    <div className="correctAnswerFont pt-2">{translation_obj.POINTS_EARNED_THIS_ROUND}</div>
+                                    <span className="fs-4">{roundTotalPoints}</span>
+                                    <div className="card d-none" id="points-earned-popup">{translation_obj.POINTS_EARNED_THIS_ROUND_POPUP}</div>
+                                </div>
+                            </Fragment>
+                        </span>
+                    </span>
                 </div>
 
                 <div className="fs-6 text-white font-regular py-4">
@@ -94,22 +91,23 @@ export default function Result(props) {
     };
 
     return (
-        <HelmetProvider>
-            <Helmet>
-                <meta property="og:title" content={translation_obj.SHARE_TITLE || "Game Results"} />
-                <meta property="og:description" content={shareMessage} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta
-                    property="og:url"
-                    content={typeof window !== "undefined" ? window.location.href : "https://goplayandwin.com"}
-                />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="Go Play & Win" />
-                <meta property="og:site_name" content="Go Play & Win" />
-            </Helmet>
-            <Fragment>{renderImageWithPoints()}</Fragment>
-        </HelmetProvider>
+        <Fragment>
+            {/* React 19 Native Metadata Support */}
+            <title>{translation_obj.SHARE_TITLE || "Game Results"}</title>
+            <meta property="og:title" content={translation_obj.SHARE_TITLE || "Game Results"} />
+            <meta property="og:description" content={shareMessage} />
+            <meta property="og:image" content={fullImageUrl} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta
+                property="og:url"
+                content={typeof window !== "undefined" ? window.location.href : "https://goplayandwin.com"}
+            />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="Go Play & Win" />
+            <meta property="og:site_name" content="Go Play & Win" />
+
+            {renderImageWithPoints()}
+        </Fragment>
     );
 }
