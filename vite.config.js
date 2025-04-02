@@ -23,6 +23,10 @@ export default defineConfig(({ command, mode }) => {
                     {
                         src: 'src/assets/css/*.css',
                         dest: 'assets/css'
+                    },
+                    {
+                        src: 'src/assets/images/*',
+                        dest: 'assets/images'
                     }
                 ]
             })
