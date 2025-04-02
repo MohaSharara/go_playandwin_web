@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import * as process from 'node:process';
+import { viteStaticCopy } from 'vite-plugin-static-copy'; // You'll need to install this
 
 export default defineConfig(({ command, mode }) => {
     // Load the correct .env file based on the mode (development, production, local)
@@ -11,7 +12,17 @@ export default defineConfig(({ command, mode }) => {
     console.log(`Mode is : ${mode}`);
 
     return {
-        plugins: [react()],
+        plugins: [
+            react(),
+            viteStaticCopy({
+                targets: [
+                    {
+                        src: 'src/assets/js/*.min.js',
+                        dest: 'assets/js'
+                    }
+                ]
+            })
+        ],
         server: {
             host: 'goplayandwin.local.com',
             port: 3000,
@@ -34,7 +45,9 @@ export default defineConfig(({ command, mode }) => {
         build: {
             target: 'esnext', // To allow top-level await
             rollupOptions: {
-                external: ['jquery', 'bootstrap', 'fingerprint2', 'Winwheel', 'TweenMax'], // Avoid bundling these scripts
+                // Either remove the external option entirely if you want to bundle these libraries
+                // or keep it if you genuinely want to exclude them from the bundle
+                // external: ['jquery', 'bootstrap', 'fingerprint2', 'Winwheel', 'TweenMax'],
             },
         },
     };
