@@ -1,6 +1,5 @@
 import React, {Fragment, use, useEffect, useState} from "react";
 import Tools from "../config/Tools";
-import MaskedInput from 'react-text-mask'
 import { IMaskInput } from 'react-imask';
 import PhoneInput from "react-phone-input-2";
 import {LandingContext} from "../contexts/LandingContext";
