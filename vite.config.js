@@ -24,16 +24,6 @@ export default defineConfig(({ command, mode }) => {
                         src: 'src/assets/css/*.css',
                         dest: 'assets/css'
                     },
-                    {
-                        // Use ** pattern to include all subdirectories
-                        src: 'src/assets/images/**/*',
-                        dest: 'assets/images',
-                        // Preserve the directory structure
-                        rename: (fileName, fileExtension, fullPath) => {
-                            // Extract the relative path from src/assets/images/
-                            return fullPath.replace(/^.*?src\/assets\/images\//, '');
-                        }
-                    }
                 ]
             })
         ],
@@ -58,8 +48,8 @@ export default defineConfig(({ command, mode }) => {
         },
         build: {
             target: 'esnext', // To allow top-level await
+            sourcemap: false,
             rollupOptions: {
-                // Removed external option to allow bundling
             },
         },
     };

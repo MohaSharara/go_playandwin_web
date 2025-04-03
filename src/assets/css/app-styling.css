@@ -42,11 +42,11 @@ th {
 /*==================================== FONTS ==============================================*/
 
 .font-arabic-bold{
-    font-family: 'NotoKufiArabic-Bold'
+    font-family: 'NotoKufiArabic-Bold', serif
 }
 
 .font-arabic-regular{
-    font-family: 'NotoKufiArabic-Regular'
+    font-family: 'NotoKufiArabic-Regular', serif
 }
 
 .font-extra-bold {
@@ -101,7 +101,7 @@ th {
 }
 
 .navbar-toggler-icon {
-    background-image: url("../images/squares.png") !important; /* Custom icon */
+    background-image: url("/assets/images/squares.png") !important; /* Custom icon */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -193,7 +193,7 @@ th {
 }
 
 .navbar-toggler-icon {
-    background-image: url("../images/squares.png");
+    background-image: url("/assets/images/squares.png");
 }
 
 #navbarLanguage {
@@ -263,11 +263,11 @@ th {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../images/squares.png"); /* Your icon */
+    background-image: url("/assets/images/squares.png"); /* Your icon */
 }
 
 .navbar-dark .navbar-toggler-world-icon {
-    background-image: url("../images/language-switcher.png"); /* Your icon */
+    background-image: url("/assets/images/language-switcher.png"); /* Your icon */
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
@@ -626,7 +626,7 @@ body {
 
 .mainBody {
     padding: 0;
-    background-image: url('../images/background.png');
+    background-image: url('assets/images/background.png');
     background-color: #040404;
     background-repeat: repeat-y;
     background-size: cover;
@@ -831,12 +831,12 @@ body {
 @media only screen and (max-width: 767px) {
 
     .mainBody {
-        background-image: url('../images/background.png');
+        background-image: url('/assets/images/background.png');
         background-color: #040404;
     }
 
     .mainBody[dir="rtl"] {
-        background-image: url('../images/background.png');
+        background-image: url('/assets/images/background.png');
         background-color: #040404;
     }
 

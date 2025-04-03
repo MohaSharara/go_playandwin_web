@@ -1,6 +1,6 @@
 .mainBody {
     padding: 0;
-    background-image: url("../images/background.png");
+    background-image: url("/assets/images/background.png");
     background-repeat: repeat-y;
     background-size: cover;
     height: 100vh;
@@ -15,7 +15,7 @@
 .questionBody {
     font-weight: bolder;
     font-size: 1rem;
-    font-family: "AvenirMedium" !important;
+    font-family: "AvenirMedium", serif !important;
 }
 
 .questionNumberContainer {
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: center;
     /*border: 1px solid var(--border-color);*/
-    font-family: "AvenirMedium" !important;
+    font-family: "AvenirMedium", serif !important;
 }
 
 .answerContainer.disabled {
@@ -67,7 +67,6 @@
 
 .answerContainer:hover {
     background-color: white;
-    color: black;
     color: inherit !important;
 }
 
@@ -95,7 +94,7 @@
     align-items: center;
     justify-content: center;
     /*border: 1px solid var(--border-color);*/
-    font-family: "AvenirMedium" !important;
+    font-family: "AvenirMedium", serif !important;
 }
 
 .OrderanswerContainer.disabled {
@@ -157,7 +156,7 @@
     border-radius: 10px !important;
     width: 55%;
     height: 45px;
-    padding: 0px;
+    padding: 0;
 }
 
 .orderingQuestionSubmitBtn:hover {
@@ -227,7 +226,7 @@
     border-radius: 10px !important;
     width: 55%;
     height: 45px;
-    padding: 0px;
+    padding: 0;
 }
 
 .yellowBtn:hover {
@@ -245,7 +244,7 @@
     border-radius: 10px !important;
     width: 55%;
     height: 45px;
-    padding: 0px;
+    padding: 0;
 }
 
 .whiteBtn:hover {
@@ -343,7 +342,7 @@
     }
 
     .mainBody {
-        background-image: url("../images/background.png");
+        background-image: url("/assets/images/background.png");
         background-size: contain !important;
     }
 
